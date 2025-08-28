@@ -13,7 +13,7 @@ SELECT matnr maktx FROM makt INTO TABLE lt_makt.
 ✅ Fix:
 
 abap
-Copia codice
+
 IF lt_keys IS NOT INITIAL.
   SELECT ...
     FOR ALL ENTRIES IN lt_keys
@@ -24,7 +24,7 @@ ENDIF.
 ✅ Fix:
 
 abap
-Copia codice
+
 SORT lt_tab BY k1 k2.
 READ TABLE lt_tab WITH KEY k1 = lv_k1 k2 = lv_k2 BINARY SEARCH.
 4) JOIN that multiplies rows (duplicates)
@@ -40,7 +40,7 @@ READ TABLE lt_tab WITH KEY k1 = lv_k1 k2 = lv_k2 BINARY SEARCH.
 ✅ Fix:
 
 abap
-Copia codice
+
 WHERE spras = sy-langu.
 7) INTO CORRESPONDING FIELDS OF TABLE with misaligned names
 ❌ If field names differ, fields remain empty.
@@ -55,7 +55,7 @@ WHERE spras = sy-langu.
 ✅ Fix:
 
 abap
-Copia codice
+
 CLEAR gs_out.
 APPEND gs_out TO gt_out.
 10) Using APPEND instead of COLLECT
@@ -79,7 +79,7 @@ APPEND gs_out TO gt_out.
 ✅ Fix:
 
 abap
-Copia codice
+
 READ TABLE lt_tab WITH KEY ...
 IF sy-subrc = 0.
   " Found
